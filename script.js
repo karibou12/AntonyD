@@ -3,7 +3,7 @@ window.onload = write();
 
 // textIntro like scripting
 let i = 0
-let txt = 'From TROYES to DETROIT'; /* The textIntro */
+let txt = 'Music is my Life'; /* The textIntro */
 let speed = 80; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
@@ -101,7 +101,7 @@ text.innerHTML = text.textContent.replace(/./g,"<span>$&</span>");
 
 const element = document.querySelectorAll('span');
 for (let i = 0; i<element.length; i++){
-    element[i].style.transform = "rotate("+i*14+"deg)"
+    element[i].style.transform = "rotate("+i*20+"deg)"
 }
 
 

@@ -12,22 +12,23 @@ window.onscroll = () => {
 //     soundcloud()
 // }
 
+
 function parallax() {
 
     let lasted = document.getElementsByClassName('lasted')[0];
     let next = document.getElementsByClassName('next')[0];
 
-    let winScrollX = window.pageYOffset;
-
-    if (winScrollX < 900) {
+    let winScrollY = window.pageYOffset;
+    console.log(window.pageYOffset);
+    if (winScrollY < 900) {
         document.addEventListener('scroll', parallax);
         lasted.style.setProperty(
             'transform',
-            `translateX(${-winScrollX}px)`,
+            `translateX(${-winScrollY}px)`,
         )
         next.style.setProperty(
             'transform',
-            `translateX(${winScrollX}px)`
+            `translateX(${winScrollY}px)`
         )
 
     } else {
@@ -41,7 +42,7 @@ function soundcloud() {
 
     let player = document.getElementsByClassName('player')[0];
     let ui = document.getElementsByClassName('ui container')[0];
-    // console.log(window.pageYOffset);
+
 
     let minWith = 220;
     let maxMarge = (window.innerWidth - 1000) /2
@@ -115,7 +116,7 @@ function pastEvents() {
         return Math.floor(Math.random() * (max - min) + min);
     }
 
-    if (document.documentElement.scrollTop > 4100) {
+    if (document.documentElement.scrollTop > 2600) {
 
         for (let elem = 0; elem < pastImg.length; elem++) {
 
@@ -141,7 +142,7 @@ function rotateText() {
 
     let element = document.getElementsByClassName("circleText")[0];
 
-    if (document.documentElement.scrollTop > 5300) {
+    if (document.documentElement.scrollTop > 3100) {
         element.classList.add('animated');
     } else {
         element.classList.remove('animated');
